@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import Header from "@/components/header"
 import Hero from "@/components/hero"
 import Categories from "@/components/categories"
@@ -28,18 +29,63 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <Hero />
-      <LocalAdvantages />
-      <Categories />
-      <FeaturedProducts />
-      <LocalDelivery />
-      <AboutUs />
-      <Testimonials />
-      <LocalMap />
-      <ContactForm />
-      <Footer />
-    </main>
+    <>
+      <Script id="schema-markup" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Мебельщик",
+            "image": "https://mebelhik.ru/logo.png",
+            "description": "Производство и продажа мебели на заказ в Твери: кухонные гарнитуры, шкафы-купе, спальни, гостиные",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Авангардная ул., 25А",
+              "addressLocality": "Тверь",
+              "addressRegion": "Тверская область",
+              "postalCode": "170100",
+              "addressCountry": "RU"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 56.859611,
+              "longitude": 35.911896
+            },
+            "url": "https://mebelhik.ru",
+            "telephone": ["+7-915-722-00-75", "+7-903-630-29-09"],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "10:00",
+                "closes": "18:00"
+              }
+            ],
+            "priceRange": "₽₽",
+            "paymentAccepted": ["cash", "credit card"],
+            "currenciesAccepted": "RUB"
+          }
+        `}
+      </Script>
+      <main className="min-h-screen">
+        <Header />
+        <Hero />
+        <LocalAdvantages />
+        <Categories />
+        <FeaturedProducts />
+        <LocalDelivery />
+        <AboutUs />
+        <Testimonials />
+        <LocalMap />
+        <ContactForm />
+        <Footer />
+      </main>
+    </>
   )
 }

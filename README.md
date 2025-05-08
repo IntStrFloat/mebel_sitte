@@ -79,7 +79,7 @@ sudo systemctl restart nginx
 module.exports = {
   apps: [{
     name: 'mebelhik',
-    script: 'npm',
+    script: 'yarn',
     args: 'start',
     env: {
       NODE_ENV: 'production',

@@ -4,17 +4,40 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
+import { Toaster } from "sonner"
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] })
 
 export const metadata: Metadata = {
-  title: "Мебельщик Тверь - Качественная мебель на заказ в Твери и Тверской области",
-  description:
-    "Широкий выбор мебели для дома и офиса в Твери. Собственное производство, доставка по Твери и Тверской области. Индивидуальный подход, качественные материалы, доступные цены.",
-  keywords:
-    "мебель Тверь, мебель на заказ Тверь, купить мебель Тверь, мебель для дома Тверь, мебель для офиса Тверь, качественная мебель Тверская область",
+  title: "Мебель на заказ в Твери | Кухни, шкафы-купе, спальни | Мебельщик",
+  description: "Производство и продажа мебели на заказ в Твери: кухонные гарнитуры, шкафы-купе, спальни, гостиные. ✓ Бесплатный замер ✓ Рассрочка ✓ Гарантия качества ☎ +7 (915) 722-00-75",
+  keywords: "мебель Тверь, кухни Тверь, шкафы-купе Тверь, спальни Тверь, мебель на заказ Тверь, кухни на заказ Тверь, мебельная фабрика Тверь, мебельщик Тверь",
+  authors: [{ name: "Мебельщик" }],
+  creator: "Мебельщик",
+  publisher: "Мебельщик",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
+  verification: {
+    google: "verification_token",
+    yandex: "verification_token",
+  },
   alternates: {
-    canonical: "https://mebelshik-tver.ru",
+    canonical: "https://mebelhik.ru",
   },
   openGraph: {
     title: "Мебельщик Тверь - Качественная мебель на заказ в Твери и Тверской области",
@@ -72,11 +95,17 @@ export default function RootLayout({
         <meta property="business:contact_data:phone_number" content="+7 (915) 722-00-75" />
         <meta property="business:contact_data:website" content="https://mebelshik-tver.ru" />
         <link rel="mask-icon" href="/logo.svg" color="#000000" />
+        <link rel="canonical" href="https://mebelhik.ru" />
+        <meta name="geo.region" content="RU-TVE" />
+        <meta name="geo.placename" content="Тверь" />
+        <meta name="geo.position" content="56.859611;35.911896" />
+        <meta name="ICBM" content="56.859611, 35.911896" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
+        <Toaster />
 
         {/* Яндекс.Метрика
         <Script id="yandex-metrika" strategy="afterInteractive">
