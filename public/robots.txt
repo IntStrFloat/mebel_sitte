@@ -2,6 +2,14 @@ User-agent: *
 Allow: /
 Sitemap: https://mebelhik.ru/sitemap.xml
 
+# Allow all bots to index the site
+User-agent: Googlebot
+Allow: /
+User-agent: Yandexbot
+Allow: /
+User-agent: Mail.RU_Bot
+Allow: /
+
 # Разрешаем индексацию всех страниц
 Allow: /*.html
 Allow: /*.php
