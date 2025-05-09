@@ -13,17 +13,24 @@ import LocalMap from "@/components/local-map"
 import LocalAdvantages from "@/components/local-advantages"
 
 export const metadata: Metadata = {
-  title: "Мебельщик Тверь - Качественная мебель на заказ в Твери и Тверской области",
-  description:
-    "Широкий выбор мебели для дома и офиса в Твери. Собственное производство, доставка по Твери и Тверской области. Индивидуальный подход, качественные материалы, доступные цены.",
+  title: "Мебель на заказ в Твери | Кухни, шкафы-купе, спальни от производителя | Цены от 15000₽ | Мебельщик",
+  description: "❤️ Производство мебели на заказ в Твери: кухни от 45000₽, шкафы-купе от 30000₽, спальни от 35000₽. ✅ Бесплатный замер ✅ Рассрочка 0% ✅ Гарантия 2 года ⭐ Более 1000 довольных клиентов! ☎ +7 (915) 722-00-75",
+  keywords: "мебель Тверь, кухни Тверь недорого, шкафы купе Тверь цены, спальни Тверь от производителя, мебель на заказ Тверь, кухни на заказ Тверь, мебельная фабрика Тверь, мебельщик Тверь, купить мебель в Твери, изготовление мебели Тверь",
   openGraph: {
-    title: "Мебельщик Тверь - Качественная мебель на заказ в Твери и Тверской области",
-    description:
-      "Широкий выбор мебели для дома и офиса в Твери. Собственное производство, доставка по Твери и Тверской области.",
-    url: "https://mebelshik-tver.ru",
-    siteName: "Мебельщик Тверь",
+    title: "Мебель на заказ в Твери | Кухни, шкафы-купе, спальни от производителя | Мебельщик",
+    description: "Производство мебели на заказ в Твери: кухни от 45000₽, шкафы-купе от 30000₽, спальни от 35000₽. Бесплатный замер, рассрочка 0%, гарантия 2 года. Более 1000 довольных клиентов!",
+    url: "https://mebelhik.ru",
+    siteName: "Мебельщик Тверь - Мебель на заказ",
     locale: "ru_RU",
     type: "website",
+    images: [
+      {
+        url: "https://mebelhik.ru/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Мебель на заказ в Твери от производителя",
+      }
+    ],
   },
 }
 
@@ -35,9 +42,9 @@ export default function Home() {
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Мебельщик",
-            "image": "https://mebelhik.ru/logo.png",
-            "description": "Производство и продажа мебели на заказ в Твери: кухонные гарнитуры, шкафы-купе, спальни, гостиные",
+            "name": "Мебельщик Тверь",
+            "image": "https://mebelhik.ru/logo.svg",
+            "description": "Производство и продажа мебели на заказ в Твери: кухонные гарнитуры, шкафы-купе, спальни, гостиные. Работаем с 2010 года. Более 1000 выполненных заказов.",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Авангардная ул., 25А",
@@ -69,7 +76,45 @@ export default function Home() {
             ],
             "priceRange": "₽₽",
             "paymentAccepted": ["cash", "credit card"],
-            "currenciesAccepted": "RUB"
+            "currenciesAccepted": "RUB",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "127"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Мебель на заказ в Твери",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Кухонные гарнитуры",
+                    "description": "Изготовление кухонных гарнитуров на заказ в Твери",
+                    "priceRange": "от 45000 RUB"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Шкафы-купе",
+                    "description": "Шкафы-купе на заказ в Твери",
+                    "priceRange": "от 30000 RUB"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Спальные гарнитуры",
+                    "description": "Спальные гарнитуры на заказ в Твери",
+                    "priceRange": "от 35000 RUB"
+                  }
+                }
+              ]
+            }
           }
         `}
       </Script>

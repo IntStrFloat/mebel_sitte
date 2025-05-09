@@ -1,135 +1,152 @@
 import type { Metadata } from "next"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { Truck, CreditCard, Clock, ShieldCheck } from "lucide-react"
 import ContactForm from "@/components/contact-form"
+import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "Доставка и оплата - Мебельщик",
-  description: "Информация о доставке и оплате мебели. Быстрая доставка, удобные способы оплаты.",
-  keywords: "доставка мебели, оплата мебели, способы оплаты, сроки доставки",
+  title: "Доставка мебели в Твери | Бесплатная доставка | Мебельщик",
+  description: "🚛 Бесплатная доставка мебели по Твери ✅ Подъем на этаж ✅ Сборка и установка ⚡ Доставка в день заказа 📦 Бережная упаковка ☎ +7 (915) 722-00-75",
+  keywords: "доставка мебели Тверь, сборка мебели Тверь, установка мебели Тверь, подъем мебели Тверь, бесплатная доставка мебели Тверь",
+  openGraph: {
+    title: "Доставка мебели в Твери | Мебельщик",
+    description: "Бесплатная доставка мебели по Твери. Профессиональная сборка и установка. Подъем на этаж.",
+    url: "https://mebelhik.ru/delivery",
+    type: "website",
+  },
 }
 
 export default function DeliveryPage() {
   return (
     <main className="min-h-screen">
       <Header />
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8">Доставка и сборка мебели</h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h2 className="text-2xl font-semibold mb-4">Условия доставки</h2>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Бесплатная доставка по Твери</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Доставка в день заказа или в удобное для вас время</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Подъем на этаж включен в стоимость</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Бережная упаковка и транспортировка</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h2 className="text-2xl font-semibold mb-4">Сборка и установка</h2>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Профессиональная сборка мебели</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Установка и настройка фурнитуры</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Вывоз упаковки после сборки</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Проверка качества работы</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-      <section className="py-12 md:py-16">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Доставка и оплата</h1>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Информация о доставке и способах оплаты мебели
-              </p>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Зоны доставки</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-4xl mb-2">🏠</div>
+              <h3 className="font-semibold mb-2">Тверь</h3>
+              <p>Бесплатная доставка в день заказа</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🏘️</div>
+              <h3 className="font-semibold mb-2">Пригород</h3>
+              <p>Доставка в радиусе 30 км - 500₽</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🚛</div>
+              <h3 className="font-semibold mb-2">Область</h3>
+              <p>Стоимость рассчитывается индивидуально</p>
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="delivery" className="py-8 md:py-12 bg-gray-50 dark:bg-gray-900">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-2xl font-bold mb-6">Доставка</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <Truck className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Зона доставки</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Мы осуществляем доставку по Москве и Московской области. Доставка в другие регионы обсуждается
-                    индивидуально.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Clock className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Сроки доставки</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Сроки доставки зависят от наличия товара на складе и составляют от 1 до 14 дней. Точные сроки
-                    доставки сообщаются менеджером при оформлении заказа.
-                  </p>
-                </div>
-              </div>
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h2 className="text-2xl font-semibold mb-4">График доставки</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold mb-2">Рабочие дни</h3>
+              <p>Понедельник - Пятница: 9:00 - 20:00</p>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <ShieldCheck className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Условия доставки</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Доставка осуществляется до подъезда. Подъем на этаж и сборка оплачиваются дополнительно. Стоимость
-                    доставки зависит от удаленности адреса и габаритов мебели.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Truck className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Бесплатная доставка</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    При заказе на сумму от 50 000 рублей доставка по Москве осуществляется бесплатно.
-                  </p>
-                </div>
-              </div>
+            <div>
+              <h3 className="font-semibold mb-2">Выходные</h3>
+              <p>Суббота - Воскресенье: 10:00 - 18:00</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section id="payment" className="py-8 md:py-12">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-2xl font-bold mb-6">Оплата</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <CreditCard className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Способы оплаты</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Мы принимаем оплату наличными, банковскими картами, банковским переводом и через онлайн-платежи.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <CreditCard className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Предоплата</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Для заказа мебели требуется внести предоплату в размере 50% от стоимости заказа. Оставшаяся сумма
-                    оплачивается при получении товара.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <CreditCard className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Рассрочка</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Мы предлагаем возможность покупки мебели в рассрочку. Условия рассрочки обсуждаются индивидуально с
-                    менеджером.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <ShieldCheck className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">Безопасность платежей</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Все платежи проходят через защищенные каналы связи. Мы гарантируем безопасность ваших персональных
-                    данных.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Script id="delivery-schema" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "DeliveryService",
+            "name": "Доставка мебели от Мебельщик Тверь",
+            "description": "Бесплатная доставка мебели по Твери с подъемом на этаж и сборкой",
+            "areaServed": {
+              "@type": "City",
+              "name": "Тверь"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Мебельщик Тверь",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Авангардная ул., 25А",
+                "addressLocality": "Тверь",
+                "addressRegion": "Тверская область",
+                "postalCode": "170100",
+                "addressCountry": "RU"
+              },
+              "telephone": "+7 (915) 722-00-75",
+              "email": "mebelshik69@mail.ru"
+            },
+            "hoursAvailable": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "10:00",
+                "closes": "18:00"
+              }
+            ]
+          }
+        `}
+      </Script>
       <ContactForm />
       <Footer />
     </main>
