@@ -93,12 +93,13 @@ export default function RootLayout({
         <meta property="business:contact_data:country_name" content="Россия" />
         <meta property="business:contact_data:email" content="mebelshik69@mail.ru" />
         <meta property="business:contact_data:phone_number" content="+7 (915) 722-00-75" />
-        <meta property="business:contact_data:website" content="https://mebelshik-tver.ru" />
+        <meta property="business:contact_data:website" content="https://mebelhik.ru" />
         <link rel="mask-icon" href="/logo.svg" color="#000000" />
         <link rel="canonical" href="https://mebelhik.ru" />
         <meta name="geo.region" content="RU-TVE" />
         <meta name="geo.placename" content="Тверь" />
         <meta name="geo.position" content="56.859611;35.911896" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="ICBM" content="56.859611, 35.911896" />
       </head>
       <body className={inter.className}>
