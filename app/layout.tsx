@@ -108,7 +108,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Toaster />
 
-        {/* Яндекс.Метрика
+        Яндекс.Метрика
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -116,19 +116,20 @@ export default function RootLayout({
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
             (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-            ym(XXXXXXXX, "init", {
-                clickmap:true,
-                trackLinks:true,
-                accurateTrackBounce:true,
-                webvisor:true
+
+            ym(101725436, "init", {
+                  clickmap:true,
+                  trackLinks:true,
+                  accurateTrackBounce:true,
+                  webvisor:true
             });
           `}
         </Script>
         <noscript>
           <div>
-            <img src="https://mc.yandex.ru/watch/XXXXXXXX" style={{ position: "absolute", left: "-9999px" }} alt="" />
+            <img src="https://mc.yandex.ru/watch/101725436" style={{ position: "absolute", left: "-9999px" }} alt="" />
           </div>
-        </noscript> */}
+        </noscript>
       </body>
     </html>
   )
