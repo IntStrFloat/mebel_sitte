@@ -40,13 +40,19 @@ export default function CategoryPage({ title, description, image, products }: Ca
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
               <Card key={product.id} className="overflow-hidden transition-all hover:shadow-lg">
-                <div className="relative h-[200px]">
-                  <Image src={product.image || "/placeholder.svg"} alt={product.title} fill className="object-cover" />
+                <div className="relative w-full aspect-[4/3] bg-white flex items-center justify-center rounded-t-lg">
+                  <Image
+                    src={product.image || "/placeholder.svg"}
+                    alt={product.title}
+                    fill
+                    className="object-contain p-4 w-full h-auto"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    priority={product.id === 1}
+                  />
                 </div>
                 <CardContent className="p-4">
                   <h3 className="text-xl font-bold mb-1">{product.title}</h3>
                   <p className="text-gray-500 dark:text-gray-400 mb-2">{product.description}</p>
-                  <p className="text-lg font-semibold mb-4">{product.price}</p>
                   <Button asChild className="w-full">
                     <Link href="#contact">Заказать звонок</Link>
                   </Button>
