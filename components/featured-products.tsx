@@ -80,7 +80,6 @@ type CategoryKey = keyof typeof furnitureCategories;
 
 const categoryButtons = [
   { key: "all" as CategoryKey, label: "Все" },
-  { key: "living" as CategoryKey, label: "Гостиная" },
   { key: "kitchen" as CategoryKey, label: "Кухни" },
   { key: "bedroom" as CategoryKey, label: "Спальни" },
   { key: "closets" as CategoryKey, label: "Шкафы-купе" },
